@@ -1,22 +1,30 @@
 package juanarboleda.apirest1.modelo.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "empleados")
 public class EntidadEmpleados {
+
     @Id
     @Column(name = "empno", nullable = false)
     private Integer id;
 
+    @NotEmpty
+    @Size(min = 2, max = 10, message ="El nombre tiene que tener entre 2 y 10 caracteres")
     @Column(name = "nombre", length = 10)
     private String nombre;
 
     @Column(name = "puesto", length = 15)
     private String puesto;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "depno")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "depno", referencedColumnName = "depno")
+    @JsonIgnoreProperties("empleados")
+
     private EntidadDepartamentos depno;
 
     public Integer getId() {

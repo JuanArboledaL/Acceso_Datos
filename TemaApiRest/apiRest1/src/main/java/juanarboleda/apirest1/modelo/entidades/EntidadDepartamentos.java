@@ -1,9 +1,10 @@
 package juanarboleda.apirest1.modelo.entidades;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "departamentos")
@@ -17,6 +18,10 @@ public class EntidadDepartamentos {
 
     @Column(name = "ubicacion", length = 13)
     private String ubicacion;
+
+    @OneToMany(mappedBy = "depno")
+    @JsonIgnoreProperties("empleados")
+    private Set<EntidadEmpleados> entidadEmpleados = new LinkedHashSet<>();
 
     public Integer getId() {
         return id;
@@ -40,6 +45,14 @@ public class EntidadDepartamentos {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
+    }
+
+    public Set<EntidadEmpleados> getEmpleados() {
+        return entidadEmpleados;
+    }
+
+    public void setEmpleados(Set<EntidadEmpleados> entidadEmpleados) {
+        this.entidadEmpleados = entidadEmpleados;
     }
 
 }

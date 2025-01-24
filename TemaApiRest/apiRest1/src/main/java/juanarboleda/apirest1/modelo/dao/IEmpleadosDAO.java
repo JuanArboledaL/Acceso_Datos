@@ -12,18 +12,16 @@ import java.util.List;
 @Repository
 public interface IEmpleadosDAO extends CrudRepository<EntidadEmpleados,Integer> {
 
-    List<EntidadEmpleados> findByNombre(String nombre);
-    List <EntidadEmpleados> findByDepnoGreaterThanEqual(int depno);
+    EntidadEmpleados findByNombre(String nombre);
+//    EntidadEmpleados findByDepnoGreaterThanEqual(int depno);
 
-    //Agregar un metodo de busqueda de empleador por nombre, especificando una cadena como prefijo
-    List <EntidadEmpleados> findByNombreStartingWith(String prefijo);
+   //Agregar un metodo de busqueda de empleador por nombre, especificando una cadena como prefijo
+//    EntidadEmpleados findByNombreStartingWith(String prefijo);
 
     //Agrega un metodo de busqueda de empleador por puesto. El puesto ha de contener una subcadena que se suministrara como parametro
-    List <EntidadEmpleados> findByPuestoContaining(String nombre);
-
+   List<EntidadEmpleados> findByPuestoContaining(String nombre);
 
     @Query ("select e from EntidadDepartamentos e where e.nombre like %:patron%")
-    List <EntidadDepartamentos> findByPatron(@Param("patron") String patron);
-
+    EntidadDepartamentos findByPatron(@Param("patron") String patron);
 
 }
