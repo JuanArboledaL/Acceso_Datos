@@ -70,6 +70,7 @@ public class ControladorDepartamentos {
         }else{
             return ResponseEntity.notFound().build();
         }
+
     }
 
     @GetMapping("dto/{id}")
