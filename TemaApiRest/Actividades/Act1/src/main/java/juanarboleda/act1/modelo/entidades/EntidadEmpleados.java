@@ -2,6 +2,8 @@ package juanarboleda.act1.modelo.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "empleados")
@@ -10,10 +12,15 @@ public class EntidadEmpleados {
     @Column(name = "empno", nullable = false)
     private Integer id;
 
-    @Column(name = "nombre", length = 10)
+    @Basic
+    @NotEmpty(message = "El campo nombre no puede estar vacio")
+    @Size(min = 3, max = 10, message = "El nombre tiene que tener entre 3 y 10 carácteres")
+    @Column(name = "nombre", nullable = false, length = 10)
     private String nombre;
 
-    @Column(name = "puesto", length = 15)
+    @NotEmpty(message = "El campo puesto no puede estar vacio")
+    @Size(min = 4, max = 15, message = "El puesto tiene que tener entre 4 y 15 carácteres")
+    @Column(name = "puesto", nullable = false, length = 15)
     private String puesto;
 
     @ManyToOne(fetch = FetchType.EAGER)
