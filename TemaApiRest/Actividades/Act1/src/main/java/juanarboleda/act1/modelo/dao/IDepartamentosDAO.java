@@ -11,7 +11,4 @@ public interface IDepartamentosDAO extends CrudRepository<EntidadDepartamentos,I
     //Busqueda por ubicación
     EntidadDepartamentos findByUbicacionIgnoreCase(String ubicacion);
 
-
-
-
 }

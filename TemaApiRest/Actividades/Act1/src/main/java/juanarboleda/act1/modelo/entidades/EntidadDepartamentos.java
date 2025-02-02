@@ -28,7 +28,7 @@ public class EntidadDepartamentos {
     private String ubicacion;
 
     @OneToMany(mappedBy = "depno")
-    @JsonIgnoreProperties("depno")
+    @JsonIgnoreProperties("empleados")
     private Set<EntidadEmpleados> empleados = new LinkedHashSet<>();
 
     public Integer getId() {
