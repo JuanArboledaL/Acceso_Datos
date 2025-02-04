@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IEmpleadosDAO extends CrudRepository<EntidadEmpleados, Integer> {
 
-    EntidadEmpleados findByPuesto(String puesto);
+    List<EntidadEmpleados> findByPuesto(String puesto);
 
     @Query("select e from EntidadEmpleados e where e.nombre like %:patron%")
     EntidadEmpleados findByName(@Param("patron") String patron);

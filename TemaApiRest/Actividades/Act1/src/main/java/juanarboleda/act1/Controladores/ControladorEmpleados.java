@@ -5,6 +5,7 @@ import juanarboleda.act1.modelo.dao.IEmpleadosDAO;
 import juanarboleda.act1.modelo.dto.EmpleadosDTO;
 import juanarboleda.act1.modelo.entidades.EntidadDepartamentos;
 import juanarboleda.act1.modelo.entidades.EntidadEmpleados;
+import juanarboleda.act1.servicios.ServicioEmpleados;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -23,14 +24,19 @@ public class ControladorEmpleados {
     @Autowired
     IDepartamentosDAO departamentosDAO;
 
+    @Autowired
+    ServicioEmpleados servicioEmpleados;
+
 
     @GetMapping
     public List<EntidadEmpleados> buscarEmpleados(@RequestParam(name = "puesto",required = false) String puesto){
 
         if(puesto == null){
-            return (List<EntidadEmpleados>) empleadosDAO.findAll();
+
+            return servicioEmpleados.buscarEmpleados();
+
         }else{
-            return (List<EntidadEmpleados>) empleadosDAO.findByPuestoContains(puesto);
+            return servicioEmpleados.buscarEmpleadosPorPuesto(puesto);
         }
     }
 
