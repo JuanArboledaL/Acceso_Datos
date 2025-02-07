@@ -1,5 +1,6 @@
 package juanarboleda.appbiblioteca2425.modelo.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ public class EntidadPrestamos {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_libro")
+    @JsonBackReference("libros")
     private EntidadLibros idLibro;
 
     @Column(name = "fecha_prestamo")
@@ -25,6 +27,7 @@ public class EntidadPrestamos {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_usuario")
+    @JsonBackReference("usuarios")
     private EntidadUsuarios idUsuario;
 
     public Integer getId() {

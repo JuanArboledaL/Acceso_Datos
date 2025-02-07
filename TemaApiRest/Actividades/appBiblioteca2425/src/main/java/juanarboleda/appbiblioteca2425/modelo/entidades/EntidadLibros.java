@@ -1,5 +1,7 @@
 package juanarboleda.appbiblioteca2425.modelo.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.LinkedHashSet;
@@ -19,6 +21,7 @@ public class EntidadLibros {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_autor")
+    @JsonBackReference("autores")
     private EntidadAutores idAutor;
 
     @Column(name = "genero", length = 50)
@@ -28,6 +31,7 @@ public class EntidadLibros {
     private Integer anioPublicacion;
 
     @OneToMany(mappedBy = "idLibro")
+    @JsonManagedReference("prestamos")
     private Set<EntidadPrestamos> prestamos = new LinkedHashSet<>();
 
     public Integer getId() {

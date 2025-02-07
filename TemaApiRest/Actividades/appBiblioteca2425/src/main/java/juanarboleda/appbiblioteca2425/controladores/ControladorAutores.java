@@ -10,7 +10,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api-rest/empleados")
+@RequestMapping("/api-rest/autores")
 public class ControladorAutores{
 
     @Autowired
@@ -32,7 +32,7 @@ public class ControladorAutores{
     @PostMapping
     public EntidadAutores guardarAutor(@RequestBody EntidadAutores entidadAutores) {
 
-        servicioAutores.GuardarAutor(entidadAutores);
+        servicioAutores.guardarAutor(entidadAutores);
 
         return entidadAutores;
     }
@@ -40,7 +40,7 @@ public class ControladorAutores{
     @DeleteMapping("{id}")
     public void borrarAutor(@PathVariable int id) {
 
-        servicioAutores.BorrarAutor(id);
+        servicioAutores.borrarAutor(id);
 
     }
 

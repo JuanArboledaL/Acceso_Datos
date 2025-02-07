@@ -18,13 +18,10 @@ public class ServicioUsuarios {
 
     public List<EntidadUsuarios> buscarUsuarios(){
 
-        List<EntidadUsuarios> usuarios = usuariosDAO.buscarUsuarios();
-        return usuarios;
+        return (List<EntidadUsuarios>) usuariosDAO.findAll();
     }
 
     public Optional<EntidadUsuarios> buscarUsuariosPorId(int id){
-
-        Optional<EntidadUsuarios> usuarios = usuariosDAO.buscarUsuarioPorId(id);
-        return usuarios;
+        return  usuariosDAO.findById(id);
     }
 }

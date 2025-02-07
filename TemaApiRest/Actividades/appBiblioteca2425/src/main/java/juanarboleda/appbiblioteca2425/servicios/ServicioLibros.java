@@ -18,14 +18,14 @@ public class ServicioLibros  {
 
     public List<EntidadLibros> buscarLibros(){
 
-        List<EntidadLibros> libros = librosDAO.buscarLibros();
+        List<EntidadLibros> libros = (List<EntidadLibros>) librosDAO.findAll() ;
 
         return libros;
     }
 
     public ResponseEntity<?> guardarLibro(EntidadLibros libro){
 
-        librosDAO.guardarLibros(libro);
+        librosDAO.save(libro);
         return ResponseEntity.ok().build();
     }
 }

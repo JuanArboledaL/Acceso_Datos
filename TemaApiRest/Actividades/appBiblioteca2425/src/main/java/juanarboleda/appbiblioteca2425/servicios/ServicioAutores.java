@@ -26,12 +26,14 @@ public class ServicioAutores{
 
         return autoresDAO.findById(id);
     }
-    public EntidadAutores GuardarAutor(EntidadAutores entidadAutores){
-        return (EntidadAutores) autoresDAO.save(entidadAutores);
+
+    public EntidadAutores guardarAutor(EntidadAutores entidadAutores){
+        return autoresDAO.save(entidadAutores);
     }
 
-    public ResponseEntity<?> BorrarAutor(int id){
+    public ResponseEntity<?> borrarAutor(int id){
         Optional<EntidadAutores> autor = autoresDAO.findById(id);
+
         if(autor.isPresent()){
             autoresDAO.deleteById(id);
             return ResponseEntity.ok().build();
