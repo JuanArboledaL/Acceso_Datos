@@ -36,11 +36,13 @@ public class ServicioDepartamentos {
 
         if(departament.isPresent()) {
 
-            departamentosDAO.save(departamento);
-            return true;
+            return false;
+
         }else{
 
-            return false;
+            departamentosDAO.save(departamento);
+            return true;
+
         }
     }
 
@@ -59,11 +61,13 @@ public class ServicioDepartamentos {
         Optional<EntidadDepartamentos> departamentos = departamentosDAO.findById(departamento.getId());
 
         if(departamentos.isPresent()) {
+
             departamentos.get().setNombre(departamento.getNombre());
             departamentos.get().setEmpleados(departamento.getEmpleados());
             departamentos.get().setUbicacion(departamento.getUbicacion());
             departamentosDAO.save(departamentos.get());
             return true;
+
         } else {
             return false;
         }

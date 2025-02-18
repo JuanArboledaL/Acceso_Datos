@@ -36,6 +36,7 @@ public class ControladorDepartamentos {
         if(servicioDepartamentos.guardarDepartamento(departamento)) {
 
             return ResponseEntity.ok().body("Departamento guardado correctamente");
+
         }else{
 
             return ResponseEntity.badRequest().build();
@@ -49,7 +50,9 @@ public class ControladorDepartamentos {
         if(servicioDepartamentos.eliminarDepartamento(id)){
 
             return ResponseEntity.ok().body("Departamento eliminado correctamente");
+
         }else{
+
             return ResponseEntity.badRequest().build();
         }
     }
