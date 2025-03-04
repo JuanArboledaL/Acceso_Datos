@@ -1,16 +1,6 @@
 package juanarboleda.apirestfutbol2425.servicios;
 
-import juanarboleda.apirestfutbol2425.modelos.daos.IJugadoresDAO;
-import juanarboleda.apirestfutbol2425.modelos.entidades.EntidadEquipos;
-import juanarboleda.apirestfutbol2425.modelos.entidades.EntidadJugadores;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.util.List;
-import java.util.Optional;
 
 
 @Service

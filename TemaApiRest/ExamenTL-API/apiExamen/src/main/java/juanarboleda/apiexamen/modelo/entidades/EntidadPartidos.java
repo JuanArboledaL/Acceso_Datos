@@ -1,5 +1,6 @@
-package juanarboleda.apirestfutbol2425.modelos.entidades;
+package juanarboleda.apiexamen.modelo.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -21,7 +22,7 @@ public class EntidadPartidos {
     private EntidadEquipos equipoLocal;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonManagedReference("equipoVisitante")
+    @JsonBackReference("equipoVisitante")
     @JoinColumn(name = "equipo_visitante_id")
     private EntidadEquipos equipoVisitante;
 

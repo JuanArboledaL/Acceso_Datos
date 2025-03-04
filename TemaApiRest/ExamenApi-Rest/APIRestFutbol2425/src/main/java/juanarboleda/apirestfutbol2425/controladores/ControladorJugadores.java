@@ -1,12 +1,8 @@
 package juanarboleda.apirestfutbol2425.controladores;
 
-import juanarboleda.apirestfutbol2425.modelos.entidades.EntidadJugadores;
 import juanarboleda.apirestfutbol2425.servicios.ServicioJugador;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/jugador")

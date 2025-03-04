@@ -1,5 +1,6 @@
-package juanarboleda.apirestfutbol2425.modelos.entidades;
+package juanarboleda.apiexamen.modelo.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -22,15 +23,15 @@ public class EntidadEquipos {
     private String escudo;
 
     @OneToMany(mappedBy = "equipo")
-    @JsonManagedReference("jugadores")
+    @JsonBackReference("jugadores")
     private Set<EntidadJugadores> jugadores = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "equipoLocal")
-    @JsonManagedReference("partidoLocal")
+    @JsonBackReference("partidoLocal")
     private Set<EntidadPartidos> partidoLocal = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "equipoVisitante")
-    @JsonManagedReference("partidoVisitante")
+    @JsonBackReference("partidoVisitante")
     private Set<EntidadPartidos> partidoVisante = new LinkedHashSet<>();
 
     public Integer getId() {
