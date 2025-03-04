@@ -1,5 +1,6 @@
 package juanarboleda.apirestfutbol2425.modelos.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -16,12 +17,12 @@ public class EntidadPartidos {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonManagedReference("equipoLocal")
+    @JsonBackReference("equipoLocal")
     @JoinColumn(name = "equipo_local_id")
     private EntidadEquipos equipoLocal;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonManagedReference("equipoVisitante")
+    @JsonBackReference("equipoVisitante")
     @JoinColumn(name = "equipo_visitante_id")
     private EntidadEquipos equipoVisitante;
 

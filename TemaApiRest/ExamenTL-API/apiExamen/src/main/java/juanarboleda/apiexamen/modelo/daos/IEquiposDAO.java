@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IEquiposDAO extends CrudRepository<EntidadEquipos, Integer> {
 
-
+    EntidadEquipos findByNombre(String nombre);
 }

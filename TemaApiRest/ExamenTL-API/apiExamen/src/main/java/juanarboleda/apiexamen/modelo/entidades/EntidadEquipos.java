@@ -1,6 +1,7 @@
 package juanarboleda.apiexamen.modelo.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -23,7 +24,7 @@ public class EntidadEquipos {
     private String escudo;
 
     @OneToMany(mappedBy = "equipo")
-    @JsonBackReference("jugadores")
+    @JsonIgnoreProperties("jugadores")
     private Set<EntidadJugadores> jugadores = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "equipoLocal")

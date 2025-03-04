@@ -1,6 +1,7 @@
 package juanarboleda.apiexamen.modelo.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -16,13 +17,13 @@ public class EntidadPartidos {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonManagedReference("equipoLocal")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("equipoLocal")
     @JoinColumn(name = "equipo_local_id")
     private EntidadEquipos equipoLocal;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonBackReference("equipoVisitante")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("equipoVisitante")
     @JoinColumn(name = "equipo_visitante_id")
     private EntidadEquipos equipoVisitante;
 

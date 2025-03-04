@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/equipos")
+@RequestMapping("/equipo")
 public class ControladorEquipo {
 
     @Autowired
@@ -24,23 +24,37 @@ public class ControladorEquipo {
 
     @GetMapping("/{id}")
     public Optional<EntidadEquipos> buscarEquipoId(@PathVariable(value = "id") int id) {
-
         return servicioEntidadEquipos.buscarEquipoById(id);
-
     }
 
     @PostMapping
     public EntidadEquipos crearEquipo(@RequestBody EntidadEquipos equipo) {
 
-//        if(servicioEntidadEquipos.guardarEquipo(equipo)){
-//
-//            return ResponseEntity.ok().body("Se ha guardado correctamente el equipo");
-//        }else{
-//
-//            return ResponseEntity.badRequest().build();
-//        }
         return servicioEntidadEquipos.guardarEquipo(equipo);
+    }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminarEquipo(@PathVariable(value = "id") int id) {
 
+        if(servicioEntidadEquipos.buscarEquipoById(id) != null) {
+
+            servicioEntidadEquipos.borrarEquipo(id);
+            return ResponseEntity.ok().body("Se ha eliminado el equipo correctamente" );
+        }else{
+            return ResponseEntity.badRequest().build();
+        }
+
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizarEquipo(@PathVariable(value = "id") int id, @RequestBody EntidadEquipos equipo) {
+
+        if(servicioEntidadEquipos.buscarEquipoById(id) != null) {
+
+            servicioEntidadEquipos.actualizarEquipo(equipo, id);
+            return ResponseEntity.ok().body("Equipo actualizado correctamente");
+        }else {
+            return ResponseEntity.badRequest().build();
+        }
     }
 }

@@ -22,7 +22,7 @@ public class EntidadJugadores {
     @Column(name = "dorsal")
     private Integer dorsal;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference("equipo")
     @JoinColumn(name = "equipo_id")
     private EntidadEquipos equipo;
