@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Libro</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Id Libro</th>
+            <th>Titulo del Libro</th>
+            <th>Género</th>
+            <th>Autor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${libro.id}"></td>
+            <td th:text="${libro.titulo}"></td>
+            <td th:text="${libro.genero}"></td>
+            <td th:text="${libro.idAutor.nombreAutor}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <a href="/verjugadores" class="button">Atras</a>
+    </div>
+</div>
+</body>
+</html>

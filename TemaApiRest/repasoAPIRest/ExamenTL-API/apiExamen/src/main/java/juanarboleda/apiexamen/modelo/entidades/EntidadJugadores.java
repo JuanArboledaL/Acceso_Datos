@@ -28,7 +28,7 @@ public class EntidadJugadores {
 
 
     @Min(value = 1, message = "El número debe ser mayor o igual a 1")
-    @Max(value = 25, message = "El número debe ser menor o igual a 25")
+    @Max(value = 30, message = "El número debe ser menor o igual a 30")
     @Column(name = "dorsal")
     private Integer dorsal;
 

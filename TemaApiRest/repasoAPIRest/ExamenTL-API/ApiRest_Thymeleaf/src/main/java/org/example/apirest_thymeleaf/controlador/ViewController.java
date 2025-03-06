@@ -80,4 +80,6 @@ public class ViewController {
         return "altaequipo";
     }
 
+    
+
 }

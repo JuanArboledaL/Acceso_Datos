@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3375c0-b6cc-4c2f-ad6d-d8e994cb6b36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/ApiRestThymeleafApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/controlador/ViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/daos/IEquiposDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/daos/IPartidosDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/daos/IjugadoresDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/entidades/EntidadEquipos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/entidades/EntidadJugadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/apirest_thymeleaf/modelo/entidades/EntidadPartidos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/altaequipo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verequipos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verjugador.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verjugadores.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verpartidos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/apirest_thymeleaf/ApiRestThymeleafApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/ApiExamenApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/controladores/ControladorEquipo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/controladores/ControladorJugadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/controladores/ControladorPartido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/daos/IEquiposDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/daos/IJugadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/daos/IPartidosDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/entidades/EntidadEquipos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/entidades/EntidadJugadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/modelo/entidades/EntidadPartidos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/servcios/ServicioEntidadEquipos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/servcios/ServicioJugadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/java/juanarboleda/apiexamen/servcios/ServicioPartido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apiExamen/src/test/java/juanarboleda/apiexamen/ApiExamenApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="bb3375c0-b6cc-4c2f-ad6d-d8e994cb6b36" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,25 +28,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiRestThymeleafApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juanito/Documents/GitHub/Acceso_Datos/TemaApiRest/ExamenTL-API/apiExamen&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ApiRestThymeleafApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/juana/Documents/GitHub/Acceso_Datos/TemaApiRest/repasoAPIRest/ExamenTL-API/ApiRest_Thymeleaf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ApiRestThymeleafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -121,6 +75,7 @@
       <updated>1741245668390</updated>
       <workItem from="1741245669468" duration="4430000" />
       <workItem from="1741258935042" duration="248000" />
+      <workItem from="1741279900073" duration="107000" />
     </task>
     <servers />
   </component>
